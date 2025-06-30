@@ -1,3 +1,4 @@
+import 'package:aaao_go/driver/pages/personalinfo.dart';
 import 'package:aaao_go/driver/widgets/containerwidget.dart';
 import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,9 @@ class _DriverpageState extends State<Driverpage> {
 
     return Scaffold(
       backgroundColor: AppColor.black,
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: AppColor.black,
+      ),
       //drawer code
       drawer: Drawer(
         child: ListView(
@@ -147,6 +150,7 @@ class _DriverpageState extends State<Driverpage> {
         ),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Align(
               alignment: Alignment.center,
@@ -199,10 +203,16 @@ class _DriverpageState extends State<Driverpage> {
             height: heightScreen * 0.02,
           ),
           ContainerButtonWidget(text2: 'Already have an account'),
-          Text(
-            'Back To Passernger Mod',
-            style: TextStyle(
-                decoration: TextDecoration.underline, color: AppColor.white),
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => PersonalInfoPage()));
+            },
+            child: Text(
+              'Back To Passernger Mood',
+              style: TextStyle(
+                  decoration: TextDecoration.underline, color: AppColor.white),
+            ),
           ),
         ],
       ),

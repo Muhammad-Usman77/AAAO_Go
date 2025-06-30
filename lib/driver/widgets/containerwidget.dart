@@ -13,11 +13,11 @@ class ContainerButtonWidget extends StatelessWidget {
       height: heightScreen * 0.07,
       width: widthScreen * 0.3,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: AppColor.btnback),
+          borderRadius: BorderRadius.circular(20), color: AppColor.appclr),
       child: Center(
         child: Text(
           text2,
-          style: TextStyle(color: AppColor.white),
+          style: TextStyle(color: AppColor.appclr2),
         ),
       ),
     );

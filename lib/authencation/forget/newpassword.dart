@@ -1,7 +1,4 @@
-import 'package:aaao_go/authencation/forget/enterotp.dart';
-import 'package:aaao_go/authencation/forget/newpassword.dart';
 import 'package:aaao_go/authencation/forget/widgets/emailwidget.dart';
-import 'package:aaao_go/driver/dialog/dialogbox.dart';
 import 'package:aaao_go/driver/widgets/containerwidget.dart';
 import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +14,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     var heightScreen = MediaQuery.of(context).size.height;
-    var widthScreen = MediaQuery.of(context).size.width;
+   // var widthScreen = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: AppColor.appclr2,
@@ -73,12 +70,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                 ),
                 InkWell(
                     onTap: () {
-                      showDialog(
-                        routeSettings: RouteSettings(),
-                          context: context,
-                          builder: (BuildContext context) {
-                            return DialogBox();
-                          });
+                     
                     },
                     child: ContainerButtonWidget(text2: 'PROCEED')),
                 SizedBox(

@@ -1,3 +1,4 @@
+
 import 'package:aaao_go/home/findride.dart';
 import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class _Home1ScreenState extends State<Home1Screen> {
   @override
   Widget build(BuildContext context) {
     var heightScreen = MediaQuery.of(context).size.height;
-    var widthScreen = MediaQuery.of(context).size.width;
+   // var widthScreen = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: AppColor.black,
@@ -61,7 +62,10 @@ class _Home1ScreenState extends State<Home1Screen> {
                         image: AssetImage('assets/location pic.png')))),
             Text(
               'Select your Ride:',
-              style: TextStyle(color: AppColor.white),
+              style: TextStyle(
+                color: AppColor.white,
+               
+              ),
             ),
             SizedBox(
               height: heightScreen * 0.02,
@@ -131,7 +135,7 @@ class _Home1ScreenState extends State<Home1Screen> {
                             color: Colors.white,
                           ))
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -148,9 +152,80 @@ class _Home1ScreenState extends State<Home1Screen> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: AppColor.btnback),
-                  child: Icon(
-                    Icons.rectangle_outlined,
-                    color: AppColor.white,
+                  child: InkWell(
+                    onTap: () {
+                      // showDialog(
+                      //     context: context,
+                      //     builder: (BuildContext context) {
+                      //       return Dialog(
+                      //         backgroundColor: AppColor.appclr2,
+                      //         child: Container(
+                      //           padding: EdgeInsets.only(left: 20, right: 20),
+                      //           height: heightScreen * 0.6,
+                      //           //width: double.infinity,
+                      //           //  padding: EdgeInsets.all(),
+                      //           //   decoration: BoxDecoration(),
+                      //           child: Column(
+                      //             //  mainAxisSize: MainAxisSize.min,
+                      //             children: [
+                      //               SizedBox(
+                      //                 height: heightScreen * 0.01,
+                      //               ),
+                      //               Align(
+                      //                 alignment: Alignment.topRight,
+                      //                 child: InkWell(
+                      //                   onTap: () {
+                      //                     Navigator.pop(context);
+                      //                   },
+                      //                   child: Icon(
+                      //                     Icons.cancel_outlined,
+                      //                     color: AppColor.appclr,
+                      //                   ),
+                      //                 ),
+                      //               ),
+                      //               Image.asset('assets/dddd.png'),
+                      //               Text(
+                      //                 'Payment Method',
+                      //                 style: TextStyle(color: AppColor.appclr),
+                      //               ),
+                      //               SizedBox(
+                      //                 height: 10,
+                      //               ),
+                      //               EmailWidgets(
+                      //                 icons1: Icons.money,
+                      //                 text1: 'Lorem Ipsum',
+                      //                 icons2: Icons.check_circle_outline,
+                      //               ),
+                      //               SizedBox(
+                      //                 height: 10,
+                      //               ),
+                      //               EmailWidgets(
+                      //                 icons1: Icons.money,
+                      //                 text1: 'Lorem Ipsum',
+                      //                 icons2: Icons.check_circle_outline,
+                      //               ),
+                      //               SizedBox(
+                      //                 height: 10,
+                      //               ),
+                      //               EmailWidgets(
+                      //                 icons1: Icons.money,
+                      //                 text1: 'Lorem Ipsum',
+                      //                 icons2: Icons.check_circle_outline,
+                      //               ),
+                      //               SizedBox(
+                      //                 height: 10,
+                      //               ),
+                      //               ContainerButtonWidget(text2: 'CONFIRM'),
+                      //             ],
+                      //           ),
+                      //         ),
+                      //       );
+                      //     });
+                    },
+                    child: Icon(
+                      Icons.rectangle_outlined,
+                      color: AppColor.white,
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -167,8 +242,11 @@ class _Home1ScreenState extends State<Home1Screen> {
                     children: [
                       SizedBox(),
                       InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> FindRidePage()));
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FindRidePage()));
                         },
                         child: Text(
                           'Find Ride',
@@ -188,9 +266,80 @@ class _Home1ScreenState extends State<Home1Screen> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: AppColor.btnback),
-                  child: Icon(
-                    Icons.tune_outlined,
-                    color: AppColor.white,
+                  child: InkWell(
+                    onTap: () {
+                      // showDialog(
+                      //     context: context,
+                      //     builder: (BuildContext context) {
+                      //       return Dialog(
+                      //         backgroundColor: AppColor.appclr2,
+                      //         child: Container(
+                      //           padding: EdgeInsets.only(left: 20, right: 20),
+                      //           height: heightScreen * 0.4,
+                      //           // width: double.infinity,
+                      //           //  padding: EdgeInsets.all(),
+                      //           // decoration: BoxDecoration(),
+                      //           child: Column(
+                      //             //  mainAxisSize: MainAxisSize.min,
+                      //             children: [
+                      //               SizedBox(
+                      //                 height: heightScreen * 0.01,
+                      //               ),
+                      //               Align(
+                      //                 alignment: Alignment.topRight,
+                      //                 child: InkWell(
+                      //                   onTap: () {
+                      //                     Navigator.pop(context);
+                      //                   },
+                      //                   child: Icon(
+                      //                     Icons.cancel_outlined,
+                      //                     color: AppColor.appclr,
+                      //                   ),
+                      //                 ),
+                      //               ),
+                      //               Image.asset('assets/dddd.png'),
+                      //               Text(
+                      //                 'Payment Method',
+                      //                 style: TextStyle(color: AppColor.appclr),
+                      //               ),
+                      //               SizedBox(
+                      //                 height: 10,
+                      //               ),
+                      //               TextFormField(
+                      //                 decoration: InputDecoration(
+                      //                     hintText: 'Add number of Passengers',
+                      //                     hintStyle:
+                      //                         TextStyle(color: AppColor.appclr),
+                      //                     focusedBorder: OutlineInputBorder(
+                      //                         borderRadius:
+                      //                             BorderRadius.circular(20),
+                      //                         borderSide: BorderSide(
+                      //                             color: AppColor.appclr)),
+                      //                     border: OutlineInputBorder(
+                      //                         borderRadius:
+                      //                             BorderRadius.circular(20),
+                      //                         borderSide: BorderSide(
+                      //                             color: AppColor.appclr)),
+                      //                     enabledBorder: OutlineInputBorder(
+                      //                         borderRadius:
+                      //                             BorderRadius.circular(20),
+                      //                         borderSide: BorderSide(
+                      //                             color: AppColor.appclr))),
+                      //               ),
+                      //               SizedBox(
+                      //                 height: 10,
+                      //               ),
+                      //               ContainerButtonWidget(text2: 'DONE'),
+                      //             ],
+                      //           ),
+                      //         ),
+                      //       );
+                      //     });
+                    },
+                    child: Icon(
+                      Icons.tune_outlined,
+                      color: AppColor.white,
+                    ),
                   ),
                 ),
               ],

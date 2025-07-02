@@ -1,7 +1,5 @@
 import 'package:aaao_go/authencation/forget/forgetpassword.dart';
-import 'package:aaao_go/driver/pages/driverlicense.dart';
-import 'package:aaao_go/driver/pages/driverpage.dart';
-import 'package:aaao_go/driver/pages/personalinfo.dart';
+
 import 'package:aaao_go/driver/pages/vehicleinformation.dart';
 import 'package:aaao_go/driver/widgets/buttonwidgets.dart';
 import 'package:aaao_go/profile/profile2.dart';
@@ -27,26 +25,26 @@ class _SearchpageState extends State<Searchpage> {
         child: Column(
           children: [
             ButtonWidget(text1: 'hh'),
-            TextButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Driverpage()));
-                },
-                child: Text('Move To Driver')),
-            TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => PersonalInfoPage()));
-                },
-                child: Text('Move To personal Info')),
-            TextButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Driverlicense()));
-                },
-                child: Text('Move To Driver License')),
+            // TextButton(
+            //     onPressed: () {
+            //       Navigator.push(context,
+            //           MaterialPageRoute(builder: (context) => Driverpage()));
+            //     },
+            //     child: Text('Move To Driver')),
+            // TextButton(
+            //     onPressed: () {
+            //       Navigator.push(
+            //           context,
+            //           MaterialPageRoute(
+            //               builder: (context) => PersonalInfoPage()));
+            //     },
+            //     child: Text('Move To personal Info')),
+            // TextButton(
+            //     onPressed: () {
+            //       Navigator.push(context,
+            //           MaterialPageRoute(builder: (context) => Driverlicense()));
+            //     },
+            //     child: Text('Move To Driver License')),
             TextButton(
                 onPressed: () {
                   Navigator.push(

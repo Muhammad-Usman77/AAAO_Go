@@ -1,4 +1,3 @@
-import 'package:aaao_go/authencation/forget/enterotp.dart';
 import 'package:aaao_go/authencation/forget/newpassword.dart';
 import 'package:aaao_go/authencation/forget/widgets/emailwidget.dart';
 import 'package:aaao_go/driver/widgets/containerwidget.dart';
@@ -16,7 +15,7 @@ class _EnterOtpScreenState extends State<EnterOtpScreen> {
   @override
   Widget build(BuildContext context) {
     var heightScreen = MediaQuery.of(context).size.height;
-    var widthScreen = MediaQuery.of(context).size.width;
+   // var widthScreen = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: AppColor.appclr2,

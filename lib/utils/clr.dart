@@ -8,5 +8,7 @@ class AppColor {
   static const cardfill = Color(0xff252424);
   static const appclr = Color(0xffFFd700);
   static const appclr2 = Color(0xff013220);
+  static const btnback2 = Color(0xff013A25);
+
 
 }

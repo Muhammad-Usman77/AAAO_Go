@@ -1,5 +1,4 @@
 import 'package:aaao_go/driver/pages/driverlicense.dart';
-import 'package:aaao_go/driver/pages/vehicleinformation.dart';
 import 'package:aaao_go/driver/widgets/backbtn.dart';
 import 'package:aaao_go/driver/widgets/containerwidget.dart';
 import 'package:aaao_go/driver/widgets/textfielwidgets.dart';

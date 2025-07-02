@@ -1,3 +1,15 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.3.0' // Updated AGP version
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0" // Keep if you have this
+        // Add other classpath dependencies here if present
+    }
+}
+
 allprojects {
     repositories {
         google()

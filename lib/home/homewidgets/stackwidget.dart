@@ -8,7 +8,14 @@ class Stackwidget extends StatelessWidget {
     Colors.green,
     Colors.yellow,
     Colors.orange,
-    Colors.purple,
+    // Colors.purple,
+  ];
+  final List<String> itemPics = [
+    'assets/Ellipse 2.png',
+    'assets/Ellipse 3.png',
+    'assets/Ellipse 4.png',
+    'assets/Ellipse 5.png',
+    'assets/Ellipse 6.png',
   ];
   @override
   Widget build(BuildContext context) {
@@ -30,32 +37,24 @@ class Stackwidget extends StatelessWidget {
               for (int i = 0; i < itemColors.length; i++)
                 Positioned(
                   left: i *
-                      30.0, // Adjust this value to control the overlap amount
+                      20.0, // Adjust this value to control the overlap amount
                   child: Container(
-                    width: 40.0,
-                    height: 40.0,
+                    width: 50.0,
+                    height: 50.0,
                     decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: itemColors[i],
-                      // borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.2),
-                          blurRadius: 5,
-                          offset: Offset(0, 3),
+                        shape: BoxShape.circle,
+                        image: DecorationImage(image: AssetImage(itemPics[i]))
+                        //   color: itemColors[i],
+                        // borderRadius: BorderRadius.circular(10),
+                        // boxShadow: [
+                        //   BoxShadow(
+                        //     color: Colors.black.withOpacity(0.2),
+                        //     blurRadius: 5,
+                        //     offset: Offset(0, 3),
+                        //   ),
+                        // ],
                         ),
-                      ],
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Item ${i + 1}',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
+                    child: Center(child: Image(image: AssetImage(itemPics[i]))),
                   ),
                 ),
             ],

@@ -9,7 +9,6 @@ buildscript {
         // Add other classpath dependencies here if present
     }
 }
-
 allprojects {
     repositories {
         google()

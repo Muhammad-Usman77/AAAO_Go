@@ -81,6 +81,7 @@ class _SearchpageState extends State<Searchpage> {
                           builder: (context) => ForgetpasswordScreen()));
                 },
                 child: Text('Forget Password')),
+            
           ],
         ),
       ),

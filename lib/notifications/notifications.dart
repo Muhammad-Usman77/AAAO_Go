@@ -1,3 +1,6 @@
+import 'package:aaao_go/driver/widgets/backbtn.dart';
+import 'package:aaao_go/notifications/widgets/notificationwidget.dart';
+import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class Notificationspage extends StatefulWidget {
@@ -10,86 +13,24 @@ class Notificationspage extends StatefulWidget {
 class _NotificationspageState extends State<Notificationspage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: Text('notifications'),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
+    return SafeArea(
+      child: Scaffold(
+          backgroundColor: AppColor.appclr2,
+          body: Column(
+            children: [
+              BackBtnPInfo(
+                icons: Icons.arrow_back_ios_new,
+                text1: 'Notifications',
+                text2: 'ClearAll',
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage(
-                        'assets/ellipse.png'), // Replace with your image
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    'John Doe',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                  Text(
-                    'john.doe@example.com',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Home'),
-              onTap: () {
-                Navigator.pop(context);
-                // Navigate to home
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
-              onTap: () {
-                Navigator.pop(context);
-                // Navigate to settings
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.help),
-              title: Text('Help'),
-              onTap: () {
-                Navigator.pop(context);
-                // Navigate to help
-              },
-            ),
-            Divider(),
-            ListTile(
-              leading: Icon(Icons.exit_to_app),
-              title: Text('Logout'),
-              onTap: () {
-                Navigator.pop(context);
-                // Handle logout
-              },
-            ),
-          ],
-        ),
-      ),
-      body: Center(
-        child: Text('Main Content Area'),
-      ),
-    
+              NotificationWidget(
+                icons1: Icons.notifications_none_outlined,
+                text1: 'Zoe send You a Message',
+                icons2: Icons.delete_outline_outlined,
+                icons3: Icons.watch_later_outlined,
+              )
+            ],
+          )),
     );
   }
 }

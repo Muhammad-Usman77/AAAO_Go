@@ -11,17 +11,17 @@ class DocUploadWidget extends StatelessWidget {
     return TextFormField(
       decoration: InputDecoration(
         filled: true,
-        fillColor: AppColor.btnback,
+        fillColor: AppColor.btnback2,
         hintText: text2,
-        hintStyle: TextStyle(color: AppColor.white),
+        hintStyle: TextStyle(color: AppColor.appclr),
         suffixIcon: TextButton(
-            style: ButtonStyle(
-                side:
-                    WidgetStateProperty.all(BorderSide(color: Colors.white))),
+            // style: ButtonStyle(
+            //     side: WidgetStateProperty.all(
+            //         BorderSide(color: AppColor.appclr)),),
             onPressed: () {},
             child: Text(
               'Upload',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: AppColor.appclr),
             )),
         // suffix: Icon(
         //   icons,
@@ -29,11 +29,15 @@ class DocUploadWidget extends StatelessWidget {
         // ),
         //suffixIconColor: AppColor.white,
 
+        focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(20),
+            borderSide: BorderSide(color: AppColor.appclr)),
         border: OutlineInputBorder(
-            borderSide: BorderSide(color: AppColor.white),
-            borderRadius: BorderRadius.all(
-              Radius.circular(30),
-            )),
+            borderRadius: BorderRadius.circular(20),
+            borderSide: BorderSide(color: AppColor.appclr)),
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(20),
+            borderSide: BorderSide(color: AppColor.appclr)),
       ),
     );
   }

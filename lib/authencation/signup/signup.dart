@@ -1,4 +1,5 @@
 import 'package:aaao_go/authencation/login/login.dart';
+import 'package:aaao_go/process/screens/process.dart';
 import 'package:aaao_go/utils/clr.dart';
 import 'package:aaao_go/widgets/buttonrow.dart';
 import 'package:aaao_go/widgets/textbutton.dart';
@@ -82,8 +83,16 @@ class _SignupState extends State<Signup> {
                   SizedBox(
                     height: 20,
                   ),
-                  Textbuttonwidget(
-                    name: 'SIGN IN',
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProcessScreen()));
+                    },
+                    child: Textbuttonwidget(
+                      name: 'SIGN UP',
+                    ),
                   ),
                   SizedBox(
                     height: 20,

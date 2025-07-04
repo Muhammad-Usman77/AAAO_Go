@@ -13,21 +13,21 @@ class PersonalInfoPage extends StatefulWidget {
 }
 
 class _PersonalInfoPageState extends State<PersonalInfoPage> {
-  final PageController _pageControllern = PageController();
+  //final PageController _pageControllern = PageController();
   int currentPage = 0;
   @override
   Widget build(BuildContext context) {
     var heightScreen = MediaQuery.of(context).size.height;
     var widthScreen = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: AppColor.black,
+      backgroundColor: AppColor.appclr2,
       body: Padding(
         padding: const EdgeInsets.all(12),
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               children: [
-                BackBtnPInfo(text1: 'Personal Info'),
+                BackBtnPInfo( icons: Icons.arrow_back_ios_new, text1: 'Personal Info'),
                 SizedBox(
                   height: heightScreen * 0.02,
                 ),
@@ -39,17 +39,17 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                           height: heightScreen * 0.1,
                           width: widthScreen * 0.1,
                           decoration: BoxDecoration(
-                              shape: BoxShape.circle, color: AppColor.btnback),
+                              shape: BoxShape.circle, color: AppColor.boxBack),
                           child: Center(
                               child: Icon(
                             Icons.add,
                             size: 20,
-                            color: AppColor.white,
+                            color: AppColor.appclr,
                           )),
                         ),
                         Text(
                           'Upload ID Card / Passport',
-                          style: TextStyle(color: AppColor.white),
+                          style: TextStyle(color: AppColor.appclr),
                         ),
                       ],
                     )),
@@ -88,6 +88,7 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                   height: heightScreen * 0.04,
                 ),
                 InkWell(
+                  borderRadius: BorderRadius.circular(20),
                     onTap: () {
                       Navigator.push(
                           context,
@@ -98,34 +99,6 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                 SizedBox(
                   height: heightScreen * 0.02,
                 ),
-                Row(
-                  children: List.generate(3, (index) {
-                    return Container(
-                      height: 10,
-                      width: 10,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color:
-                            currentPage == index ? Colors.blue : Colors.white,
-                      ),
-                    );
-                  }),
-                ),
-                // Expanded(
-                //     child: PageView(
-                //   physics: NeverScrollableScrollPhysics(),
-                //   controller: _pageControllern,
-                //   onPageChanged: (index) {
-                //     setState(() {
-                //       currentPage = index;
-                //     });
-                //   },
-                //   children: [
-                //     PersonalInfoPage(),
-                //     Driverlicense(),
-                //     Vehicleinformation(),
-                //   ],
-                // )),
               ],
             ),
           ),

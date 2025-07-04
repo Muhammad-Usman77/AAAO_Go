@@ -2,10 +2,10 @@ import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class Textfielswidget extends StatelessWidget {
-  String text1;
+ final  String text1;
   
-  TextEditingController? wController;
-  Textfielswidget({super.key,  this.wController, required this.text1});
+ final  TextEditingController? wController;
+ const  Textfielswidget({super.key,  this.wController, required this.text1});
 
   @override
   Widget build(BuildContext context) {

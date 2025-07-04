@@ -15,7 +15,7 @@ class _ForgetpasswordScreenState extends State<ForgetpasswordScreen> {
   @override
   Widget build(BuildContext context) {
     var heightScreen = MediaQuery.of(context).size.height;
-    var widthScreen = MediaQuery.of(context).size.width;
+  //  var widthScreen = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: AppColor.appclr2,

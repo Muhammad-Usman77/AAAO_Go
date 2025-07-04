@@ -2,11 +2,11 @@ import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class Textformwidget extends StatelessWidget {
-  String hint;
-  Color backColor;
-  IconData? icons;
-  TextEditingController? wcontroller;
-  Textformwidget(
+ final  String hint;
+ final  Color backColor;
+ final  IconData? icons;
+ final  TextEditingController? wcontroller;
+ const  Textformwidget(
       {super.key,
       required this.hint,
       this.wcontroller,

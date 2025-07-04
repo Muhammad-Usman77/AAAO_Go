@@ -15,7 +15,7 @@ class _Profile2ScreenState extends State<Profile2Screen> {
   @override
   Widget build(BuildContext context) {
     var heightScreen = MediaQuery.of(context).size.height;
-    var widthScreen = MediaQuery.of(context).size.width;
+   // var widthScreen = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: AppColor.appclr2,

@@ -2,8 +2,8 @@ import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class Textbuttonwidget extends StatelessWidget {
-  String name;
-  Textbuttonwidget({super.key, required this.name});
+ final String name;
+ const Textbuttonwidget({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 import 'package:aaao_go/authencation/forget/widgets/emailwidget.dart';
 import 'package:aaao_go/driver/widgets/containerwidget.dart';
+import 'package:aaao_go/process/screens/process.dart';
 import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     var heightScreen = MediaQuery.of(context).size.height;
-   // var widthScreen = MediaQuery.of(context).size.width;
+    // var widthScreen = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: AppColor.appclr2,
@@ -70,7 +71,10 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                 ),
                 InkWell(
                     onTap: () {
-                     
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProcessScreen()));
                     },
                     child: ContainerButtonWidget(text2: 'PROCEED')),
                 SizedBox(

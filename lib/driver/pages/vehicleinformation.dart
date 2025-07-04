@@ -1,6 +1,7 @@
 import 'package:aaao_go/driver/widgets/backbtn.dart';
 import 'package:aaao_go/driver/widgets/containerwidget.dart';
 import 'package:aaao_go/driver/widgets/docupload.dart';
+import 'package:aaao_go/home/home.dart';
 import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
@@ -15,16 +16,18 @@ class _VehicleinformationState extends State<Vehicleinformation> {
   @override
   Widget build(BuildContext context) {
     var heightScreen = MediaQuery.of(context).size.height;
-    var widthScreen = MediaQuery.of(context).size.height;
+    // var widthScreen = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: AppColor.black,
+      backgroundColor: AppColor.appclr2,
       body: Padding(
         padding: const EdgeInsets.all(12),
         child: SingleChildScrollView(
           child: SafeArea(
             child: Column(
               children: [
-                BackBtnPInfo(text1: 'Vehicle Information'),
+                BackBtnPInfo(
+                    icons: Icons.arrow_back_ios_new,
+                    text1: 'Vehicle Information'),
                 SizedBox(
                   height: heightScreen * 0.03,
                 ),
@@ -60,7 +63,15 @@ class _VehicleinformationState extends State<Vehicleinformation> {
                 SizedBox(
                   height: heightScreen * 0.04,
                 ),
-                ContainerButtonWidget(text2: 'Proceed')
+                InkWell(
+                    borderRadius: BorderRadius.circular(20),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomePage()));
+                    },
+                    child: ContainerButtonWidget(text2: 'Proceed'))
               ],
             ),
           ),

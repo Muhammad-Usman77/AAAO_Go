@@ -2,8 +2,8 @@ import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class Textbottonrow extends StatelessWidget {
-  String image;
-   Textbottonrow({super.key, required this.image});
+ final  String image;
+ const   Textbottonrow({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {

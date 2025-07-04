@@ -18,14 +18,14 @@ class _DriverlicenseState extends State<Driverlicense> {
     var heightScreen = MediaQuery.of(context).size.height;
     var widthScreen = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: AppColor.black,
+      backgroundColor: AppColor.appclr2,
       body: Padding(
         padding: const EdgeInsets.all(12),
         child: SingleChildScrollView(
           child: SafeArea(
             child: Column(
               children: [
-                BackBtnPInfo(text1: 'Personal Info'),
+                BackBtnPInfo(text1: 'Driver License'),
                 SizedBox(
                   height: heightScreen * 0.2,
                 ),
@@ -38,17 +38,17 @@ class _DriverlicenseState extends State<Driverlicense> {
                           height: heightScreen * 0.1,
                           width: widthScreen * 0.1,
                           decoration: BoxDecoration(
-                              shape: BoxShape.circle, color: AppColor.btnback),
+                              shape: BoxShape.circle, color: AppColor.btnback2),
                           child: Center(
                               child: Icon(
                             Icons.add,
                             size: 20,
-                            color: AppColor.white,
+                            color: AppColor.appclr,
                           )),
                         ),
                         Text(
                           'License Image',
-                          style: TextStyle(color: AppColor.white),
+                          style: TextStyle(color: AppColor.appclr),
                         ),
                       ],
                     ),
@@ -58,17 +58,17 @@ class _DriverlicenseState extends State<Driverlicense> {
                           height: heightScreen * 0.1,
                           width: widthScreen * 0.1,
                           decoration: BoxDecoration(
-                              shape: BoxShape.circle, color: AppColor.btnback),
+                              shape: BoxShape.circle, color: AppColor.boxBack),
                           child: Center(
                               child: Icon(
                             Icons.add,
                             size: 20,
-                            color: AppColor.white,
+                            color: AppColor.appclr,
                           )),
                         ),
                         Text(
                           'Selfie With License',
-                          style: TextStyle(color: AppColor.white),
+                          style: TextStyle(color: AppColor.appclr),
                         ),
                       ],
                     ),
@@ -90,6 +90,7 @@ class _DriverlicenseState extends State<Driverlicense> {
                   height: heightScreen * 0.08,
                 ),
                 InkWell(
+                  borderRadius: BorderRadius.circular(20),
                     onTap: () {
                       Navigator.push(
                           context,

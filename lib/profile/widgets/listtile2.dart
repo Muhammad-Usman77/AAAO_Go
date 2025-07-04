@@ -2,10 +2,10 @@ import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class ListTile2 extends StatelessWidget {
-  IconData icons1;
-  String text1;
-  IconData? icons2;
-  ListTile2(
+ final  IconData icons1;
+ final  String text1;
+ final  IconData? icons2;
+ const  ListTile2(
       {super.key, required this.icons1, required this.text1, this.icons2});
 
   @override

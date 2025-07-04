@@ -1,6 +1,7 @@
-import 'package:aaao_go/driver/pages/driverrequest.dart';
+
 import 'package:aaao_go/home/homewidgets/smallcontainer.dart';
 import 'package:aaao_go/home/homewidgets/stackwidget.dart';
+import 'package:aaao_go/reachdestination/tipscreen.dart';
 import 'package:aaao_go/utils/clr.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
@@ -172,7 +173,7 @@ class _FindRidePageState extends State<FindRidePage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => DriverRequest()));
+                                    builder: (context) => TipScreen()));
                           },
                           child: Text(
                             'Raise Fare',

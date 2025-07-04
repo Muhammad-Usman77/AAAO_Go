@@ -2,10 +2,10 @@ import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class Rowidgets extends StatelessWidget {
-  String text1;
-  String text2;
-  IconData icons;
-  Rowidgets(
+ final String text1;
+ final  String text2;
+ final  IconData icons;
+ const  Rowidgets(
       {super.key,
       required this.text1,
       required this.text2,

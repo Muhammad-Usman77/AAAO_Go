@@ -2,9 +2,9 @@ import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class DriverRequestWidget extends StatelessWidget {
-  bool isAccepted;
-  Image image;
-  DriverRequestWidget(
+ final  bool isAccepted;
+ final  Image image;
+ const  DriverRequestWidget(
       {super.key, required this.isAccepted, required this.image});
 
   @override

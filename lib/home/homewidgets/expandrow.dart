@@ -2,10 +2,10 @@ import 'package:aaao_go/utils/clr.dart';
 import 'package:flutter/material.dart';
 
 class ExpandrowWidget extends StatelessWidget {
-  String text1;
-  TextEditingController? wController;
-  IconData icons;
-  ExpandrowWidget(
+ final String text1;
+ final TextEditingController? wController;
+ final IconData icons;
+ const ExpandrowWidget(
       {super.key, this.wController, required this.icons, required this.text1});
 
   @override

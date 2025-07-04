@@ -1,4 +1,6 @@
+import 'package:aaao_go/authencation/forget/forgetpassword.dart';
 import 'package:aaao_go/authencation/signup/signup.dart';
+import 'package:aaao_go/process/screens/process3.dart';
 import 'package:aaao_go/utils/clr.dart';
 import 'package:aaao_go/widgets/buttonrow.dart';
 import 'package:aaao_go/widgets/textbutton.dart';
@@ -54,7 +56,13 @@ class _LognPageState extends State<LoginPage> {
                       ),
                       Spacer(),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (cotnext) =>
+                                      ForgetpasswordScreen()));
+                        },
                         child: Text(
                           'Forget Password?',
                           style: TextStyle(
@@ -68,8 +76,16 @@ class _LognPageState extends State<LoginPage> {
                   SizedBox(
                     height: 20,
                   ),
-                  Textbuttonwidget(
-                    name: 'Sign Up',
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Process3Screen()));
+                    },
+                    child: Textbuttonwidget(
+                      name: 'Sign In',
+                    ),
                   ),
                   SizedBox(
                     height: 20,

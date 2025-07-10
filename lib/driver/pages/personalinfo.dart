@@ -13,8 +13,6 @@ class PersonalInfoPage extends StatefulWidget {
 }
 
 class _PersonalInfoPageState extends State<PersonalInfoPage> {
-  //final PageController _pageControllern = PageController();
-  int currentPage = 0;
   @override
   Widget build(BuildContext context) {
     var heightScreen = MediaQuery.of(context).size.height;
@@ -27,7 +25,8 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                BackBtnPInfo( icons: Icons.arrow_back_ios_new, text1: 'Personal Info'),
+                BackBtnPInfo(
+                    icons: Icons.arrow_back_ios_new, text1: 'Personal Info'),
                 SizedBox(
                   height: heightScreen * 0.02,
                 ),
@@ -88,7 +87,7 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                   height: heightScreen * 0.04,
                 ),
                 InkWell(
-                  borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(20),
                     onTap: () {
                       Navigator.push(
                           context,
@@ -107,3 +106,26 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
     );
   }
 }
+ /*     SizedBox(
+                  height: 100,
+                  width: 100,
+                  child: PageView.builder(
+                    controller: _pageController,
+                    onPageChanged: (index) {
+                      setState(() {
+                        _currentPage = index;
+                      });
+                    },
+                    itemCount: pages.length + 1,
+                    itemBuilder: (context, index) {
+                      if (index == 0) {
+                        return Container(
+                          color: Colors.blue,
+                          child: const Center(child: Text('This is Page 1')),
+                        );
+                      }
+                      return pages[index - 1];
+                    },
+                  ),
+                ),
+             */
